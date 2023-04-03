@@ -1,0 +1,116 @@
+.dialogContainer {
+  --header-height: 40px;
+
+
+  background-color: white;
+  border-radius: 8px;
+  min-width: 500px;
+
+  &.fullscreen {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    .header {
+      .toolIcon {
+        .icon {
+          &:last-child {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+  .header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-inline-start: 20px;
+    }
+
+    .toolIcon {
+      display: flex;
+      flex-direction: row;
+
+      .icon {
+        height: var(--header-height);
+        width: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+
+        &:hover {
+          background-color: rgb(184, 184, 184);
+        }
+
+        &:last-child {
+          border-top-right-radius: 8px;
+
+          &:hover {
+            background-color: rgb(232, 17, 35);
+          }
+
+        }
+      }
+    }
+  }
+
+  .body {
+    padding: 20px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: right;
+    padding: 10px 20px;
+
+    .btn {
+      height: 32px;
+      border: 1px solid #d9d9d9;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, .02);
+      border-radius: 6px;
+      padding: 4px 15px;
+      margin-inline: 5px;
+      line-height: 24px;
+      background-color: white;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        color: #4096ff;
+        border-color: #4096ff;
+      }
+
+      &:active {
+        color: #0958d9;
+        border-color: #0958d9;
+      }
+
+      &.primary {
+        border: 1px solid #1677ff;
+        background-color: #1677ff;
+        color: white;
+
+        &:active {
+          color: #fff;
+          background-color: #0958d9;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
