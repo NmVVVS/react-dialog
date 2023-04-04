@@ -66,6 +66,8 @@
 
   .body {
     padding: 20px;
+    overflow-y: scroll;
+    max-height: 600px;
   }
 
   .footer {

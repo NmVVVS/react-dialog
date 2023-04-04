@@ -14,17 +14,19 @@ interface DialogProps {
 		onOk?: (instance: DialogInstance) => void;
 }
 
+// type DialogType = { dialogRoot?: Root, id: string, show: (options?: DialogNodeProps & DialogProps) => void, close: () => void };
 
-let dialogRoot: Root;
-const Dialog = {
+class Dialog {
+		private dialogRoot: Root | undefined = undefined;
+		private id: string = "";
+
 		show(options?: DialogNodeProps & DialogProps) {
 				const dialogDocument = document.createElement("div");
-				dialogDocument.setAttribute("id", "dialog");
+				this.id = "dialog-" + Math.random().toString(36).slice(-8);
+				dialogDocument.setAttribute("id", this.id);
 				dialogDocument.setAttribute("class", Style.dialog);
 				document.body.insertBefore(dialogDocument, null);
-
-				dialogRoot = ReactDOM.createRoot(dialogDocument);
-
+				this.dialogRoot = ReactDOM.createRoot(dialogDocument);
 				const onCancel = () => {
 						options?.onCancel?.(this);
 				}
@@ -33,12 +35,13 @@ const Dialog = {
 						options?.onOk?.(this);
 				}
 
-				dialogRoot.render(<DialogNode {...options} onCancel={onCancel} onOk={onOk}/>);
+				this.dialogRoot!.render(<DialogNode {...options} onCancel={onCancel} onOk={onOk}/>);
 				return this;
-		},
+		}
+
 		close() {
-				dialogRoot.unmount();
-				document.body.removeChild(document.getElementById("dialog")!);
+				this.dialogRoot?.unmount();
+				document.body.removeChild(document.getElementById(this.id)!);
 		}
 }
 
