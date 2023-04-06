@@ -100,6 +100,7 @@
 
     .body {
       max-height: calc(100vh - var(--header-height) - var(--footer-height));
+      overflow: auto;
     }
 
     .footer {

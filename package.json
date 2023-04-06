@@ -1,6 +1,6 @@
 {
   "name": "@ghgenz/react-dialog",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "xevckq@proton.me",
     "email": "xevckq@proton.me"
@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "rimraf es && rollup -c",
-    "publish": "yarn build && npm publish --access public",
+    "push": "yarn build && npm publish --access public",
     "chromatic": "npx chromatic --project-token=10adf2ba5cae",
     "start:webpack": "react-scripts start",
     "build:webpack": "react-scripts build",
