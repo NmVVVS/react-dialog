@@ -1,12 +1,12 @@
 import ReactDOM, {Root} from "react-dom/client";
-import DialogNode from "./dialog-node/index";
+import DialogNode from "./dialog-node";
 
 import Style from './index.module.scss';
-import {DialogInstance, DialogNodeProps} from "./Props";
+import {DialogInstance, DialogNodeProps} from "./interface";
 
 // import '../assets/fontawesome-free-6.4.0-web/css/regular.min.css';
 // import '../assets/fontawesome-free-6.4.0-web/css/fontawesome.min.css';
-import '../assets/fontawesome-free-6.4.0-web/css/all.min.css';
+import '../../assets/fontawesome-free-6.4.0-web/css/all.min.css';
 
 
 interface DialogProps {

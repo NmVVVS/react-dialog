@@ -1,3 +1,5 @@
-import ReactDialog from './dialog/index';
+import Dialog from "./dialog/Dialog";
 
-export default ReactDialog;
+export * from './dialog/Open';
+
+export default Dialog;

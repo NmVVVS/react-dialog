@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Style from './index.module.scss';
-import {DialogNodeProps} from "../Props";
+import {DialogNodeProps} from "../interface";
 
 
 const Index: React.FC<DialogNodeProps & { onCancel: () => void, onOk: () => void }> = (props) => {
