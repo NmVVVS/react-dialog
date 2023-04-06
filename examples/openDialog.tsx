@@ -22,8 +22,6 @@ const Test: React.FC = () => {
 								<button onClick={onClick1}>打开</button>
 						</div>,
 						onClose: () => {
-
-
 								console.log("AA");
 								// closeDialog();
 						}

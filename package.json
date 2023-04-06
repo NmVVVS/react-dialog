@@ -1,11 +1,11 @@
 {
-  "name": "react-dialog",
-  "version": "0.0.1",
+  "name": "@ghgenz/react-dialog",
+  "version": "1.0.2",
   "author": {
-    "name": "asdfadf",
-    "email": "asdfas@qq.com"
+    "name": "xevckq@proton.me",
+    "email": "xevckq@proton.me"
   },
-  "description": "React dialog",
+  "description": "React dialog component",
   "keywords": [
     "react",
     "dialog",
@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "rimraf es && rollup -c",
-    "publish": "yarn build && npm publish",
+    "publish": "yarn build && npm publish --access public",
     "chromatic": "npx chromatic --project-token=10adf2ba5cae",
     "start:webpack": "react-scripts start",
     "build:webpack": "react-scripts build",
@@ -40,15 +40,15 @@
     ]
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "@vitejs/plugin-react-swc": "^3.2.0",
+    "@ant-design/icons": "^5.0.1"
+  },
+  "devDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "typescript": "^4.8.2",
-    "vite": "^4.2.1"
-  },
-  "devDependencies": {
+    "vite": "^4.2.1",
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-strip": "^2.1.0",
