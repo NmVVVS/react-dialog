@@ -7,12 +7,23 @@
   --confirm-button-background-color: #1677ff;
 }
 
+
 .root {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  svg {
+    path {
+      fill: black;
+    }
+  }
+
+  .actionIcon {
+    width: 18px;
+    height: 18px;
+  }
 
   &.normal {
     top: 0;
@@ -91,10 +102,17 @@
 
             &:hover {
               background-color: rgb(232, 17, 35);
-              color: white;
+              //color: white;
+              svg {
+                path {
+                  fill: white;
+                }
+              }
             }
           }
         }
+
+
       }
     }
 
@@ -159,6 +177,12 @@
   justify-content: space-between;
   line-height: var(--header-height);
   padding-left: 10px;
+
+  svg {
+    path {
+      fill: black;
+    }
+  }
 
   .title {
     flex: 1;
